@@ -43,10 +43,10 @@ dependencies {
     testCompile 'org.easytesting:fest-assert-core:2.0M10'
 }
 
-cobertura {
-    coverageCheckLineRate = 60
-    coverageCheckHaltOnFailure = true
-}
+//cobertura {
+//    coverageCheckLineRate = 60
+//    coverageCheckHaltOnFailure = true
+//}
 
 task prePush(dependsOn: ['clean', 'coberturaCheck', 'coberturaReport', 'performCoverageCheck', 'test'])
 
