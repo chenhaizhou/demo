@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="544fb2e6-c223-4d95-bfa6-c5b353cd52a2" name="Default" comment="" />
+    <list default="true" id="544fb2e6-c223-4d95-bfa6-c5b353cd52a2" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gradle/gradle.iml" />
+    </list>
     <ignored path="gradle.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -354,12 +356,12 @@
       <changelist id="544fb2e6-c223-4d95-bfa6-c5b353cd52a2" name="Default" comment="" />
       <created>1413355149739</created>
       <updated>1413355149739</updated>
-      <workItem from="1413355153216" duration="18000" />
+      <workItem from="1413355153216" duration="603000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18000" />
+    <option name="totallyTimeSpent" value="603000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="12" y="22" width="1423" height="801" extended-state="0" />
