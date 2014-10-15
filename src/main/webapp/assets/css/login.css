@@ -1,0 +1,30 @@
+@charset "utf-8";
+#login-area {
+    float:left;
+    line-height:50px;
+}
+#login-area strong {
+    font-weight:normal;
+}
+
+.login-btn {
+    float: right;
+}
+
+.login-user {
+    display: none;
+    color: #ffffff;
+}
+
+.logout-btn {
+    display: none;
+    padding-left: 15px;
+}
+
+.error-msg {
+    color: #ff0000;
+}
+
+#addBook-li {
+    display: none;
+}

@@ -1,0 +1,124 @@
+apply plugin: 'java'
+apply plugin: 'jetty'
+
+repositories {
+    mavenCentral()
+}
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'net.saliman:gradle-cobertura-plugin:2.2.5'
+    }
+}
+apply plugin: 'net.saliman.cobertura'
+
+dependencies {
+    compile 'org.springframework:spring-webmvc:4.0.3.RELEASE'
+    compile 'org.springframework:spring-core:4.0.3.RELEASE'
+    compile 'org.springframework:spring-aop:4.0.3.RELEASE'
+    compile 'org.springframework:spring-web:4.0.3.RELEASE'
+    compile 'org.springframework:spring-beans:4.0.3.RELEASE'
+    compile 'org.springframework:spring-context:4.0.3.RELEASE'
+    compile 'org.springframework:spring-tx:4.0.3.RELEASE'
+    compile 'org.springframework:spring-jdbc:4.0.3.RELEASE'
+    compile 'org.mybatis:mybatis:3.2.7'
+    compile 'org.mybatis:mybatis-spring:1.2.2'
+    compile 'org.codehaus.jackson:jackson-core-asl:1.9.13'
+    compile 'org.codehaus.jackson:jackson-mapper-asl:1.9.13'
+    compile 'org.json:json:20140107'
+    compile 'mysql:mysql-connector-java:5.1.32'
+    compile 'log4j:log4j:1.2.17'
+    compile 'commons-fileupload:commons-fileupload:1.3.1'
+    compile 'javax.servlet:servlet-api:2.5'
+    compile 'net.sf.ehcache:ehcache-core:2.6.9'
+    compile 'net.sf.ehcache:ehcache:2.8.4'
+    compile 'com.googlecode.ehcache-spring-annotations:ehcache-spring-annotations:1.2.0'
+    compile 'org.springframework:spring-context-support:4.1.1.RELEASE'
+    compile 'com.google.guava:guava:18.0'
+    testCompile 'junit:junit-dep:4.11'
+    testCompile 'org.mockito:mockito-all:1.9.5'
+    testCompile 'org.easytesting:fest-assert-core:2.0M10'
+}
+
+cobertura {
+    coverageCheckLineRate = 60
+    coverageCheckHaltOnFailure = true
+}
+
+task prePush(dependsOn: ['clean', 'coberturaCheck', 'coberturaReport', 'performCoverageCheck', 'test'])
+
+task createJavaProject << {
+    sourceSets*.java.srcDirs*.each { it.mkdirs() }
+    sourceSets*.resources.srcDirs*.each { it.mkdirs() }
+}
+
+task createWebProject(dependsOn: 'createJavaProject') << {
+    def webAppDir = file("$webAppDirName")
+    webAppDir.mkdirs()
+}
+
+task createTables(type: Exec) {
+
+    def username = ""
+    def password = ""
+
+    sourceSets*.resources.srcDirs*.each {
+        if (it.toString().contains("main/")) {
+            def file = file("$it/conf/jdbc.properties")
+            def content = ''
+            file.eachLine {
+                it = it.replaceFirst("=", "='");
+                it = it + "'"
+                content = content + it + "\n"
+            }
+            def map = new ConfigSlurper().parse("$content")
+            username = map.jdbc_username
+            password = map.jdbc_password
+        }
+    }
+    workingDir './'
+    commandLine 'mysql', "-u$username", "--password=$password", 'lib'
+    standardInput file('src/main/resources/db/tables.sql').newInputStream()
+}
+
+task createTestData(type: Exec) {
+    def username = ""
+    def password = ""
+
+    sourceSets*.resources.srcDirs*.each {
+        if (it.toString().contains("test/")) {
+            def file = file("$it/conf/jdbc.properties")
+            def content = ''
+            file.eachLine {
+                it = it.replaceFirst("=", "='");
+                it = it + "'"
+                content = content + it + "\n"
+            }
+            def map = new ConfigSlurper().parse("$content")
+            username = map.jdbc_username
+            password = map.jdbc_password
+        }
+    }
+    workingDir './'
+    commandLine 'mysql', "-u$username", "--password=$password", 'lib'
+    standardInput file('src/test/resources/db/test_data.sql').newInputStream()
+}
+
+task createImageUploadDir << {
+    def uploadDir = file("src/main/webapp/upload")
+    if (!uploadDir.exists()) {
+        uploadDir.mkdir()
+    }
+}
+
+task copyDocs(type: Copy) {
+    from 'src/test/resources/images'
+    into 'src/main/webapp/upload'
+}
+
+createTestData.dependsOn createTables
+createTestData.dependsOn copyDocs
+copyDocs.dependsOn createImageUploadDir
