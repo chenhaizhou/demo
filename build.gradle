@@ -5,16 +5,9 @@ repositories {
     mavenCentral()
 }
 
-buildscript {
-    repositories {
-        mavenCentral()
-    }
-    dependencies {
-        classpath 'net.saliman:gradle-cobertura-plugin:2.2.5'
-    }
+plugins {
+    id 'net.saliman.cobertura' version '2.2.5'
 }
-
-apply plugin: 'net.saliman.cobertura'
 
 dependencies {
     compile 'org.springframework:spring-webmvc:4.0.3.RELEASE'
