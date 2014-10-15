@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.thoughtworks.dolphin.dao.BookDAO">
+
+    <insert id="addBook" parameterType="Book" keyProperty="id">
+        insert into books(
+        book_name,
+        author,
+        isbn,
+        publisher,
+        cover_image_id,
+        introduction,
+        create_time)
+        values
+        (
+        #{name},
+        #{author},
+        #{isbn},
+        #{publisher},
+        #{coverImageId},
+        #{introduction},
+        #{createdTime}
+        )
+    </insert>
+
+
+    <resultMap id="getBooksResultMap" type="Book">
+    <result column="book_id" property="id"/>
+    <result column="book_name" property="name"/>
+    <result column="author" property="author"/>
+    <result column="isbn" property="isbn"/>
+    <result column="publisher" property="publisher"/>
+    <result column="cover_image_id" property="coverImageId"/>
+    <result column="introduction" property="introduction"/>
+    <association property="image" javaType="Image" column="cover_image_id" select="com.thoughtworks.dolphin.dao.ImageDAO.getImage"/>
+</resultMap>
+
+    <select id="getBooks" resultMap="getBooksResultMap" parameterType="java.util.Map">
+        select book_id, book_name, author, isbn, publisher, cover_image_id, introduction from books
+        <if test="#{keyword} != null">
+            where match(book_name, author, isbn, publisher) against(#{keyword})
+        </if>
+        order by create_time desc, book_id desc limit #{fromIdx}, #{len}
+    </select>
+
+
+    <select id="getBookCount" resultType="java.lang.Integer" parameterType="com.thoughtworks.dolphin.dto.BookSearchCondition">
+        select count(1) as cnt from books
+        <if test="keyword != null">
+            where match(book_name, author, isbn, publisher) against(#{keyword})
+        </if>
+    </select>
+
+    <select id="getBookByISBN" resultMap="getBooksResultMap">
+        select book_id, book_name, author, isbn, publisher, cover_image_id, introduction from books where isbn = #{isbn}
+    </select>
+
+    <delete id="deleteBook">
+        delete from books where isbn = #{isbn}
+    </delete>
+</mapper>

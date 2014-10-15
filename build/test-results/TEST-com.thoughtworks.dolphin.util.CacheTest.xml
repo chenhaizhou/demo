@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.thoughtworks.dolphin.util.CacheTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2014-10-15T06:21:54" hostname="CNhzchen.local" time="0.028">
+  <properties/>
+  <testcase name="testCacheUtilStoreValue" classname="com.thoughtworks.dolphin.util.CacheTest" time="0.024"/>
+  <testcase name="testClearCache" classname="com.thoughtworks.dolphin.util.CacheTest" time="0.003"/>
+  <testcase name="testRemoveCache" classname="com.thoughtworks.dolphin.util.CacheTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+]]></system-err>
+</testsuite>
