@@ -5,6 +5,10 @@ repositories {
     mavenCentral()
 }
 
+plugins {
+    id 'net.saliman.cobertura' version '2.2.5'
+}
+
 buildscript {
     repositories {
         mavenCentral()
@@ -13,7 +17,7 @@ buildscript {
         classpath 'net.saliman:gradle-cobertura-plugin:2.2.5'
     }
 }
-//apply plugin: 'net.saliman.cobertura'
+apply plugin: 'net.saliman.cobertura'
 
 dependencies {
     compile 'org.springframework:spring-webmvc:4.0.3.RELEASE'
@@ -43,10 +47,10 @@ dependencies {
     testCompile 'org.easytesting:fest-assert-core:2.0M10'
 }
 
-//cobertura {
-//    coverageCheckLineRate = 60
-//    coverageCheckHaltOnFailure = true
-//}
+cobertura {
+    coverageCheckLineRate = 60
+    coverageCheckHaltOnFailure = true
+}
 
 task prePush(dependsOn: ['clean', 'coberturaCheck', 'coberturaReport', 'performCoverageCheck', 'test'])
 
