@@ -13,7 +13,7 @@ buildscript {
         classpath 'net.saliman:gradle-cobertura-plugin:2.2.5'
     }
 }
-apply plugin: 'net.saliman.cobertura'
+//apply plugin: 'net.saliman.cobertura'
 
 dependencies {
     compile 'org.springframework:spring-webmvc:4.0.3.RELEASE'
