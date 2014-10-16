@@ -1,5 +1,7 @@
 apply plugin: 'java'
 apply plugin: 'jetty'
+apply plugin: 'idea'
+
 
 repositories {
     mavenCentral()
@@ -7,15 +9,13 @@ repositories {
 
 buildscript {
     repositories {
-        jcenter()
+        mavenCentral()
     }
     dependencies {
-        classpath "net.saliman:gradle-cobertura-plugin:2.2.5"
+        classpath 'net.saliman:gradle-cobertura-plugin:2.2.2'
     }
 }
-
-
-apply plugin: 'net.saliman.cobertura'
+apply plugin: 'cobertura'
 
 dependencies {
     compile 'org.springframework:spring-webmvc:4.0.3.RELEASE'
@@ -26,6 +26,7 @@ dependencies {
     compile 'org.springframework:spring-context:4.0.3.RELEASE'
     compile 'org.springframework:spring-tx:4.0.3.RELEASE'
     compile 'org.springframework:spring-jdbc:4.0.3.RELEASE'
+    compile 'org.springframework:spring-test:4.1.0.RELEASE'
     compile 'org.mybatis:mybatis:3.2.7'
     compile 'org.mybatis:mybatis-spring:1.2.2'
     compile 'org.codehaus.jackson:jackson-core-asl:1.9.13'
