@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="544fb2e6-c223-4d95-bfa6-c5b353cd52a2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="544fb2e6-c223-4d95-bfa6-c5b353cd52a2" name="Default" comment="" />
     <ignored path="gradle.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,20 +23,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="build.gradle" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="build.gradle" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1298" max-vertical-offset="1980">
+            <state vertical-scroll-proportion="1.143695" vertical-offset="0" max-vertical-offset="1980">
               <caret line="52" column="49" selection-start-line="52" selection-start-column="35" selection-end-line="52" selection-end-column="49" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gradle-wrapper.properties" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="gradle-wrapper.properties" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.109970674" vertical-offset="0" max-vertical-offset="682">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="165">
               <caret line="5" column="60" selection-start-line="5" selection-start-column="60" selection-end-line="5" selection-end-column="60" />
               <folding />
             </state>
@@ -962,12 +959,12 @@
       <workItem from="1413356998752" duration="620000" />
       <workItem from="1413357650161" duration="1748000" />
       <workItem from="1413360278543" duration="3647000" />
-      <workItem from="1413431822948" duration="242000" />
+      <workItem from="1413431822948" duration="560000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6881000" />
+    <option name="totallyTimeSpent" value="7199000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="17" y="25" width="1423" height="801" extended-state="0" />
@@ -1073,18 +1070,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
+    <entry file="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1298" max-vertical-offset="1980">
-          <caret line="52" column="49" selection-start-line="52" selection-start-column="35" selection-end-line="52" selection-end-column="49" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="165">
+          <caret line="5" column="60" selection-start-line="5" selection-start-column="60" selection-end-line="5" selection-end-column="60" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties">
+    <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.109970674" vertical-offset="0" max-vertical-offset="682">
-          <caret line="5" column="60" selection-start-line="5" selection-start-column="60" selection-end-line="5" selection-end-column="60" />
+        <state vertical-scroll-proportion="1.143695" vertical-offset="0" max-vertical-offset="1980">
+          <caret line="52" column="49" selection-start-line="52" selection-start-column="35" selection-end-line="52" selection-end-column="49" />
           <folding />
         </state>
       </provider>
