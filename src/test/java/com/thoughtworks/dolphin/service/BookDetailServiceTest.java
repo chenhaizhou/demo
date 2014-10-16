@@ -68,7 +68,7 @@ public class BookDetailServiceTest {
 
         int resultCode = bookService.updateBook(book);
 
-        assertTrue(resultCode == 2);
+        assertTrue(resultCode == 1);
     }
 
 }

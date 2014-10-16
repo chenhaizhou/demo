@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="544fb2e6-c223-4d95-bfa6-c5b353cd52a2" name="Default" comment="" />
+    <list default="true" id="544fb2e6-c223-4d95-bfa6-c5b353cd52a2" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/thoughtworks/dolphin/service/BookDetailServiceTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/thoughtworks/dolphin/service/BookDetailServiceTest.java" />
+    </list>
     <ignored path="gradle.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -36,8 +38,8 @@
       <file leaf-file-name="BookDetailServiceTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/thoughtworks/dolphin/service/BookDetailServiceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8680352" vertical-offset="263" max-vertical-offset="945">
-              <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.7800586" vertical-offset="263" max-vertical-offset="945">
+              <caret line="70" column="34" selection-start-line="70" selection-start-column="34" selection-end-line="70" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -1060,12 +1062,12 @@
       <workItem from="1413356998752" duration="620000" />
       <workItem from="1413357650161" duration="1748000" />
       <workItem from="1413360278543" duration="3647000" />
-      <workItem from="1413431822948" duration="1674000" />
+      <workItem from="1413431822948" duration="1860000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8313000" />
+    <option name="totallyTimeSpent" value="8499000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="46" y="22" width="1423" height="801" extended-state="0" />
@@ -1189,8 +1191,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/thoughtworks/dolphin/service/BookDetailServiceTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8680352" vertical-offset="263" max-vertical-offset="945">
-          <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.7800586" vertical-offset="263" max-vertical-offset="945">
+          <caret line="70" column="34" selection-start-line="70" selection-start-column="34" selection-end-line="70" selection-end-column="34" />
           <folding />
         </state>
       </provider>
