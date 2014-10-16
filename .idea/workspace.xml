@@ -28,8 +28,8 @@
       <file leaf-file-name="build.gradle" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4398827" vertical-offset="450" max-vertical-offset="1980">
-              <caret line="50" column="3" selection-start-line="47" selection-start-column="2" selection-end-line="50" selection-end-column="3" />
+            <state vertical-scroll-proportion="-1.595308" vertical-offset="1298" max-vertical-offset="1980">
+              <caret line="14" column="1" selection-start-line="7" selection-start-column="0" selection-end-line="14" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -949,12 +949,12 @@
       <workItem from="1413356976338" duration="6000" />
       <workItem from="1413356998752" duration="620000" />
       <workItem from="1413357650161" duration="1748000" />
-      <workItem from="1413360278543" duration="3038000" />
+      <workItem from="1413360278543" duration="3647000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6030000" />
+    <option name="totallyTimeSpent" value="6639000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="17" y="25" width="1423" height="801" extended-state="0" />
@@ -1054,8 +1054,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4398827" vertical-offset="450" max-vertical-offset="1980">
-          <caret line="50" column="3" selection-start-line="47" selection-start-column="2" selection-end-line="50" selection-end-column="3" />
+        <state vertical-scroll-proportion="-1.595308" vertical-offset="1298" max-vertical-offset="1980">
+          <caret line="14" column="1" selection-start-line="7" selection-start-column="0" selection-end-line="14" selection-end-column="1" />
           <folding />
         </state>
       </provider>
