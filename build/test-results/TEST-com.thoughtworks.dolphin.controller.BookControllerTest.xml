@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.thoughtworks.dolphin.controller.BookControllerTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2014-10-16T03:47:48" hostname="CNhzchen.local" time="0.168">
+<testsuite name="com.thoughtworks.dolphin.controller.BookControllerTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2014-10-16T05:02:52" hostname="CNhzchen.local" time="0.165">
   <properties/>
-  <testcase name="shouldAddBook" classname="com.thoughtworks.dolphin.controller.BookControllerTest" time="0.162"/>
+  <testcase name="shouldAddBook" classname="com.thoughtworks.dolphin.controller.BookControllerTest" time="0.159"/>
   <testcase name="shouldGetBookDetail" classname="com.thoughtworks.dolphin.controller.BookControllerTest" time="0.002"/>
-  <testcase name="shouldEditBook" classname="com.thoughtworks.dolphin.controller.BookControllerTest" time="0.002"/>
+  <testcase name="shouldEditBook" classname="com.thoughtworks.dolphin.controller.BookControllerTest" time="0.001"/>
   <testcase name="shouldIsExist" classname="com.thoughtworks.dolphin.controller.BookControllerTest" time="0.002"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[log4j:WARN No appenders could be found for logger (com.thoughtworks.dolphin.controller.BookController).
